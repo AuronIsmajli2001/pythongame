@@ -1,0 +1,587 @@
+import pygame
+import time as t
+import random as r
+import turtle
+def Numra():
+    numr = r.randint(1,100)
+
+    qello = int(input("Gjeni numrin prej 1 deri 100: "))
+
+    while qello != numr:
+        if qello < numr:
+            print("Numri duhet te jete ma i madh!")
+            qello = int(input("Gjeni numrin prej 1 deri 100: "))
+        else:
+            print("Numri duhet te jete me i vogel!")
+            qello = int(input("Gjeni numrin prej 1 deri 100: "))
+    print("Sakte! Numri ishte : "+str(numr))
+def Dice():
+    zmin = 1
+    zmax = 6
+    X = input("Deshironi te fillojme me lojen e zareve? -  ").upper()
+    while X == "PO":
+        print("Zaret jane duke u rrotulluar ...")
+        t.sleep(1)
+        print("Duket se zaret do te ndalen ne vend...")
+        t.sleep(1)
+        print("Njeri zar u ndal,presim edhe tjetrin...")
+        t.sleep(1)
+        guri1 = r.randint(zmin,zmax)
+        print("Zari i pare: ", guri1)
+        guri2 = r.randint(zmin,zmax)
+        print("Zari i dyte: ", guri2)
+
+        print("Totali : ", guri1+guri2)
+        X = input("Deshironi te luani prape?").upper()
+    if X == "JO":
+        print("Faleminderit!")            
+        
+def Kuizi():
+    print("Mire se vini!")
+    t.sleep(1)
+    points = 0
+    I = input("Deshironi te fillojme? -").upper()
+    while I == "PO":
+        print("Piket : "+ str(points))
+        print("Sa planete jane ne Sistemin Diellor?")
+        X = input("9 planete(a),8 planete(b),10 planete(c),asnje planet(d) ->").upper()
+        print("...")
+        t.sleep(2)
+        
+        if X == "B":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print("Piket :"+ str(points))
+        print("Cili shtet ka territorin me te madh?")
+        Y = input("Kina(a),India(b),Kanada(c),Rusia(d)  ->").upper()
+        print("...")
+        t.sleep(2)
+        
+        if Y == "D":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print("Si quhet rrotullimi i Tokes rreth boshtit te vet?")
+        Z = input("Rotacion(a),Revolucion(b),Vetudhtim(c),Ska emer(d)  ->").upper()
+        print("...")
+        t.sleep(2)
+        
+        if Z == "A":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print("Delfini bene pjese ne grupin e: ")
+        C = input("Gjitareve(a),Zvarranikeve(b),Ujetokesoreve(c),Peshqeve(d) ->").upper()
+        print("...")
+        t.sleep(2)
+        
+        if C == "A":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print ("Kur u ngrit flamuri shqiptar per here te pare?")
+        H = input("28.Nentor.1443(a) 28.Nentor.1912(b) 28.Nentor.1444(c) 28.Nentor.1555(d)  ->").upper()
+        print("...")
+        t.sleep(2)
+        if H == "A":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print ("Cili ekip futbolli ka fituar Boterorin me se shumti?")
+        J = input("Franca(a),Spanja(b),Brazili(c),Gjermania(d)  ->").upper()
+        print("...")
+        t.sleep(2)
+        if J == "C":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print('Nga cili shtet rrjedh fjala "Kimi"?')
+        K = input("Egjipti(a),Arabia(b),Japonia(c),Greqia(d)  ->").upper()
+        print("...")
+        t.sleep(2)
+        if K == "A":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print ("Fjalet qe shkruhen ndryshe dhe kane kuptim te kundert quhen :")
+        L = input("Sinonime(a),Antonime(b),(Homonime(c),Fjale te kunderta(d)  ->)").upper()
+        print("...")
+        t.sleep(2)
+        if L == "B":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print ("Cila eshte maja me e larte ne bote?")
+        F = input("Mali Everest(a),Mali Kilimanxharo(b),Mali Kanchenjuga(c),Mali i Gjeravices lol(d)").upper()
+        print("...")
+        t.sleep(2)
+        if F == "A":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Piket : "+ str(points))
+        print("2+2*2-1 = ")
+        Q = input("4(a),7(b),5(c),9(d)  ->").upper()
+        print("...")
+        t.sleep(2)
+        if Q == "C":
+            print("Sakte!")
+            points += 1
+        else:
+            print("Gabim!")
+        t.sleep(2)
+        print ("Kuizi perfundoi. Ju keni " + str(points)+ " pike.")
+        t.sleep(2)
+        print("Keto jane pyetjet per momentin do te shtojme edhe shum kuize")
+        t.sleep(2)
+        W = input("Deshironi te luani prape?").upper()
+        if W != "JO":
+            print("Keni shenuar fjalen gabim! Pergjigjuni me 'PO' ose 'JO'")
+            W = input("Deshironi te luani prape?").upper()
+            if W == "JO":
+                break
+        if W == "PO":
+            print ("Ne rregull")
+        if W == "JO":
+            break
+            
+            
+
+def Snake():
+    pygame.init()
+     
+    white = (255, 255, 255)
+    yellow = (255, 255, 102)
+    black = (0, 0, 0)
+    red = (213, 50, 80)
+    green = (0, 255, 0)
+    blue = (50, 153, 213)
+     
+    dis_width = 600
+    dis_height = 400
+     
+    dis = pygame.display.set_mode((dis_width, dis_height))
+    pygame.display.set_caption('SnakeGameByAuron')
+     
+    clock = pygame.time.Clock()
+     
+    snake_block = 10
+    snake_speed = 15
+     
+    font_style = pygame.font.SysFont("bahnschrift", 25)
+    score_font = pygame.font.SysFont("comicsansms", 35)
+     
+     
+    def Your_score(score):
+        value = score_font.render("Your Score: " + str(score), True, red)
+        dis.blit(value, [0, 0])
+     
+     
+     
+    def our_snake(snake_block, snake_list):
+        for x in snake_list:
+            pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
+     
+     
+    def message(msg, color):
+        mesg = font_style.render(msg, True, color)
+        dis.blit(mesg, [dis_width / 6, dis_height / 3])
+     
+     
+    def gameLoop():
+        game_over = False
+        game_close = False
+     
+        x1 = dis_width / 2
+        y1 = dis_height / 2
+     
+        x1_change = 0
+        y1_change = 0
+     
+        snake_List = []
+        Length_of_snake = 1
+     
+        foodx = round(r.randrange(0, dis_width - snake_block) / 10.0) * 10.0
+        foody = round(r.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+     
+        while not game_over:
+     
+            while game_close == True:
+                dis.fill(black)
+                message("You Lost! Press C-Play Again or Q-Quit", red)
+                Your_score(Length_of_snake - 1)
+                pygame.display.update()
+     
+                for event in pygame.event.get():
+                    if event.type == pygame.KEYDOWN:
+                        if event.key == pygame.K_q:
+                            game_over = True
+                            game_close = False
+                        if event.key == pygame.K_c:
+                            gameLoop()
+     
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    game_over = True
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_LEFT:
+                        x1_change = -snake_block
+                        y1_change = 0
+                    elif event.key == pygame.K_RIGHT:
+                        x1_change = snake_block
+                        y1_change = 0
+                    elif event.key == pygame.K_UP:
+                        y1_change = -snake_block
+                        x1_change = 0
+                    elif event.key == pygame.K_DOWN:
+                        y1_change = snake_block
+                        x1_change = 0
+     
+            if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
+                game_close = True
+            x1 += x1_change
+            y1 += y1_change
+            dis.fill(blue)
+            pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+            snake_Head = []
+            snake_Head.append(x1)
+            snake_Head.append(y1)
+            snake_List.append(snake_Head)
+            if len(snake_List) > Length_of_snake:
+                del snake_List[0]
+     
+            for x in snake_List[:-1]:
+                if x == snake_Head:
+                    game_close = True
+     
+            our_snake(snake_block, snake_List)
+            Your_score(Length_of_snake - 1)
+     
+            pygame.display.update()
+     
+            if x1 == foodx and y1 == foody:
+                foodx = round(r.randrange(0, dis_width - snake_block) / 10.0) * 10.0
+                foody = round(r.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+                Length_of_snake += 1
+     
+            clock.tick(snake_speed)
+     
+        pygame.quit()
+        
+     
+     
+    gameLoop()
+def Hangman():
+    word_list = ["libri", "lapsi", "luani", "antilopa", "topi", "guri","enciklopedia","teknologjia"]
+
+    def get_word(word_list):
+        word = r.choice(word_list)
+        return word.upper()
+
+
+    def play(word):
+        word_completion = "_" * len(word)
+        guessed = False
+        guessed_letters = []
+        guessed_words = []
+        tries = 5
+        print("Le te luajme Hangman!")
+        print(display_hangman(tries))
+        print(word_completion)
+        print("\n")
+        while not guessed and tries > 0:
+            guess = input("Gjeje shkronjen ose fjalen: ").upper()
+            if len(guess) == 1 and guess.isalpha():
+                if guess in guessed_letters:
+                    print("Tashme e ke provuar", guess, "!")
+                elif guess not in word:
+                    print(guess, "nuk eshte ne fjale.....:(")
+                    tries -= 1
+                    guessed_letters.append(guess)
+                else:
+                    print("Te lumte,", guess, "eshte ne fjale!")
+                    guessed_letters.append(guess)
+                    word_as_list = list(word_completion)
+                    indices = [i for i, letter in enumerate(word) if letter == guess]
+                    for index in indices:
+                        word_as_list[index] = guess
+                    word_completion = "".join(word_as_list)
+                    if "_" not in word_completion:
+                        guessed = True
+            elif len(guess) == len(word) and guess.isalpha():
+                if guess in guessed_words:
+                    print("Tashme e ke provuar ", guess, "!")
+                elif guess != word:
+                    print(guess, " nuk eshte :(")
+                    tries -= 1
+                    guessed_words.append(guess)
+                else:
+                    guessed = True
+                    word_completion = word
+            else:
+                print("invalid")
+            print(display_hangman(tries))
+            print(word_completion)
+            print("\n")
+        if guessed:
+            print("Ju lumte! Ju keni gjetur fjalen!")
+        else:
+            print("Me vjen keq te kane mbarua rradhet. Fjala ishte " + word + ". Shnosh kofshum!")
+
+
+
+
+    def display_hangman(tries):
+        stages = [  """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|/
+                       |      |
+                       |     / \\
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|/
+                       |      |
+                       |     /
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|/
+                       |      |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|
+                       |      |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |      |
+                       |      |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |
+                       |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      
+                       |
+                       |
+                       |
+                       -
+                       """
+        ]
+        return stages[tries]
+
+    def main():
+        word = get_word(word_list)
+        play(word)
+        while input("Prape? (Y/N) ").upper() == "Y":
+            word = get_word(word_list)
+            play(word)
+    word_list = ["libri", "lapsi", "luani", "antilopa", "topi", "guri"]
+
+    def get_word(word_list):
+        word = r.choice(word_list)
+        return word.upper()
+
+
+    def play(word):
+        word_completion = "_" * len(word)
+        guessed = False
+        guessed_letters = []
+        guessed_words = []
+        tries = 5
+        print("Le te luajme Hangman!")
+        print(display_hangman(tries))
+        print(word_completion)
+        print("\n")
+        while not guessed and tries > 0:
+            guess = input("Gjeje shkronjen ose fjalen: ").upper()
+            if len(guess) == 1 and guess.isalpha():
+                if guess in guessed_letters:
+                    print("Tashme e ke provuar", guess, "!")
+                elif guess not in word:
+                    print(guess, "nuk eshte ne fjale.....:(")
+                    tries -= 1
+                    guessed_letters.append(guess)
+                else:
+                    print("Te lumte,", guess, "eshte ne fjale!")
+                    guessed_letters.append(guess)
+                    word_as_list = list(word_completion)
+                    indices = [i for i, letter in enumerate(word) if letter == guess]
+                    for index in indices:
+                        word_as_list[index] = guess
+                    word_completion = "".join(word_as_list)
+                    if "_" not in word_completion:
+                        guessed = True
+            elif len(guess) == len(word) and guess.isalpha():
+                if guess in guessed_words:
+                    print("Tashme e ke provuar ", guess, "!")
+                elif guess != word:
+                    print(guess, " nuk eshte :(")
+                    tries -= 1
+                    guessed_words.append(guess)
+                else:
+                    guessed = True
+                    word_completion = word
+            else:
+                print("invalid")
+            print(display_hangman(tries))
+            print(word_completion)
+            print("\n")
+        if guessed:
+            print("Ju lumte! Ju keni gjetur fjalen!")
+        else:
+            print("Me vjen keq te kane mbaruar rradhet. Fjala ishte " + word + ". Shnosh kofshum!")
+
+
+
+
+    def display_hangman(tries):
+        stages = [  """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|/
+                       |      |
+                       |     / \\
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|/
+                       |      |
+                       |     /
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|/
+                       |      |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |     \\|
+                       |      |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |      |
+                       |      |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      O
+                       |
+                       |
+                       |
+                       -
+                       """,
+                       """
+                       --------
+                       |      |
+                       |      
+                       |
+                       |
+                       |
+                       -
+                       """
+        ]
+        return stages[tries]
+
+    def main():
+        word = get_word(word_list)
+        play(word)
+        X = input("Prape? (PO/JO) ").upper()
+        while X == "PO":
+            word = get_word(word_list)
+            play(word)
+        if X != "JO":
+            print ("Keni shenuar gabim")
+            input("Prape? (PO/JO) ").upper()
+
+    if __name__ == "__main__":
+        main()
+
+        
+Y = input("Deshironi te luani ? - ").upper()
+while Y == "PO":
+    print("Snake(a)   Hangman(b)   Quiz(c)   Dice(d)   FindTheNumber(e)")
+    X = input("Cilen loje doni te luani? - ").upper()
+    if X == "A":
+        Snake()
+    if X == "B":
+        Hangman()
+    if X == "C":
+        Kuizi()
+    if X == "D":
+        Dice()
+    if X == "E":
+        Numra()
